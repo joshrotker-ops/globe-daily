@@ -51,12 +51,12 @@ const A={lat:-cs[1].lat,lon:cs[1].lon>0?cs[1].lon-180:cs[1].lon+180};
 const near=CITIES.map(city).sort((a,b)=>km(a,A)-km(b,A))[0],nd=km(near,A);
 const rounds=[
  {tag:"Round 1 · Find the city",clue:`<div class="big">${esc(cs[0].n)}, ${esc(cs[0].co)}</div>`,targets:[cs[0]],d:g=>km(g,cs[0]),free:100,scale:2500,rev:`${esc(cs[0].n)}, ${esc(cs[0].co)}.`},
- {tag:`Round 2 · Where in history? (${ev[0]})`,clue:esc(ev[1]),targets:[{lat:ev[3],lon:ev[4]}],d:g=>km(g,{lat:ev[3],lon:ev[4]}),free:ev[5],scale:1500,rev:`<b>${ev[2]}.</b> ${esc(ev[6])}`},
+ {tag:`Round 2 · Where in history? (${ev[0]})`,clue:esc(ev[1]),targets:[{lat:ev[3],lon:ev[4]}],d:g=>km(g,{lat:ev[3],lon:ev[4]}),free:ev[5],scale:3000,rev:`<b>${ev[2]}.</b> ${esc(ev[6])}`},
  {tag:"Round 3 · Where is this spoken?",clue:`<div class="big">${esc(se[1])}</div><div class="mono" style="color:var(--mute)">Pin any country where this language is spoken.</div>`,
   hit:se[3],targets:countries.filter(f=>se[3].includes(f.properties.name)).map(centroid),d:g=>distToCountries(g,se[3]),free:0,scale:1200,
   rev:`<b>${esc(se[0])}.</b> “${esc(se[2])}” Highlighted countries speak it.`},
  {tag:"Round 4 · The other side of the world",clue:`<div class="mono">Find the point exactly opposite:</div><div class="big">${esc(cs[1].n)}, ${esc(cs[1].co)}</div>`,
-  targets:[A],marks:[{...cs[1],c:"var(--blue)"}],d:g=>km(g,A),free:300,scale:1500,
+  targets:[A],marks:[{...cs[1],c:"var(--blue)"}],d:g=>km(g,A),free:300,scale:3000,
   rev:`The antipode of ${esc(cs[1].n)} is shown in green. ${nd<1500?`Nearest city in our list: ${esc(near.n)}, ${esc(near.co)} (${Math.round(nd)} km away).`:"It falls in open ocean."}`},
  {tag:"Round 5 · Which city fits?",clue:`<div class="mono">Language: <b>${esc(endo(cs[2].lang))}</b><br>Population: <b>about ${cs[2].pop} million</b> (${cs[2].rank===1?"the largest city":"#"+cs[2].rank+" largest city"} in its country)<br>Average annual temperature: <b>${cs[2].t} °C</b></div>`,
   targets:[cs[2]],d:g=>km(g,cs[2]),free:100,scale:1500,rev:`${esc(cs[2].n)}, ${esc(cs[2].co)}. The language clue was ${esc(cs[2].lang)}.`}];
