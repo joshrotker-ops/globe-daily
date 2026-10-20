@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Globe Daily</title>
+<meta name="description" content="A daily five-round geography game: drop a pin on the map.">
+<link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+<main>
+<h1>Globe<span>Daily</span></h1>
+<p class="sub" id="date"></p>
+<div class="dots" id="dots"></div>
+<div class="card"><div class="tag" id="tag"></div><div class="clue" id="clue"></div></div>
+<div class="mapwrap">
+ <svg id="map" viewBox="0 0 360 180" aria-label="World map. Tap to drop a pin, drag to pan, pinch or use the buttons to zoom."></svg>
+ <div class="zoom"><button id="zi" aria-label="Zoom in">+</button><button id="zo" aria-label="Zoom out">−</button><button id="zr" aria-label="Reset view">⟲</button></div>
+</div>
+<div class="card" id="fbwrap" hidden><div class="fb" id="fb"></div></div>
+<button class="pri" id="go" disabled>Lock in guess</button>
+<p class="hint" id="stats"></p>
+</main>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

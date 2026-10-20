@@ -1,0 +1,24 @@
+:root{--bg:#f6f3ec;--card:#fff;--ink:#1d2a2e;--mute:#6b7a7e;--acc:#0f766e;--land:#cfe3d4;--sea:#e4eef2;--bad:#c2410c;--good:#15803d;--line:#d9d4c7;--blue:#1d4ed8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root{--bg:#10181a;--card:#182326;--ink:#e8efef;--mute:#8fa1a5;--acc:#2dd4bf;--land:#2b4a3f;--sea:#14262c;--bad:#fb923c;--good:#4ade80;--line:#2b3b3f;--blue:#60a5fa}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.45}
+main{max-width:720px;margin:0 auto;padding:16px}
+h1{font-size:28px;margin:8px 0 0}h1 span{color:var(--acc)}
+.sub,.hint{color:var(--mute);font:14px system-ui,sans-serif}.sub{margin:2px 0 12px}
+.dots{display:flex;gap:6px;margin-bottom:10px}
+.dot{flex:1;height:8px;border-radius:4px;background:var(--line)}.dot.on{background:var(--acc)}.dot.done{background:var(--good)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.tag{font:600 12px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:var(--acc)}
+.clue{font-size:19px;margin:6px 0 0}.big{font-size:26px;margin:4px 0}.mono{font:15px system-ui,sans-serif}
+.mapwrap{position:relative}
+svg{width:100%;height:auto;display:block;background:var(--sea);border-radius:10px;cursor:crosshair;touch-action:none;border:1px solid var(--line)}
+.country{fill:var(--land);stroke:var(--mute);stroke-width:.4;vector-effect:non-scaling-stroke}
+.country.hit{fill:var(--good);fill-opacity:.55}
+.zoom{position:absolute;right:8px;top:8px;display:flex;flex-direction:column;gap:4px}
+.zoom button{width:34px;height:34px;padding:0;font-size:18px}
+button{font:600 15px system-ui,sans-serif;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:10px 14px;cursor:pointer}
+button.pri{background:var(--acc);color:#10181a;border-color:var(--acc);width:100%;margin-top:4px;padding:13px}
+button:disabled{opacity:.45;cursor:not-allowed}
+.fb{font:15px system-ui,sans-serif;border-left:3px solid var(--acc);padding:2px 12px}
+.grid{font-size:26px;letter-spacing:4px;text-align:center;margin:8px 0}
