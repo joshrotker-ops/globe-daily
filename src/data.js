@@ -32,3 +32,6 @@ export const SENT=[
 ["French","Où est la boulangerie ?","Where is the bakery?",["France","Senegal","Côte d'Ivoire","Dem. Rep. Congo","Madagascar","Mali","Cameroon","Haiti"]],
 ["Turkish","Bugün hava çok güzel.","The weather is lovely today.",["Turkey"]],
 ["Indonesian","Saya mau makan nasi goreng.","I want to eat fried rice.",["Indonesia"]]];
+
+// Country populations in millions (approximate), used in round 5. Keys must match the country strings in CITIES.
+export const COUNTRY_POP={"Japan":123,"Egypt":118,"Peru":34,"Kenya":56,"Spain":49,"Australia":27,"Türkiye":86,"Thailand":72,"Argentina":46,"Nigeria":230,"Mexico":131,"Russia":144,"South Africa":64,"Indonesia":280,"Portugal":10.4,"Iceland":0.39,"Chile":19.8,"Ethiopia":130,"Vietnam":101,"New Zealand":5.3,"Senegal":18.5,"Mongolia":3.5,"Ecuador":18.3};

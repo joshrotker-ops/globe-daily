@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="stylesheet" href="/src/style.css"><link rel="stylesheet" href="/src/site.css"><title>Contact · Globe Daily</title></head>
+<body><header class="top"><a class="logo" href="/">Globe<span>Daily</span></a><nav><a href="/">Play</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></nav></header>
+<main class="page" style="max-width:960px">
+<h1>Contact</h1>
+<p style="margin:12px 0 28px;max-width:620px">Spotted a wrong answer, have a question, or want to work with us? Send a note and we’ll get back to you.</p>
+<div class="cols">
+<form id="cf" class="card" method="POST" action="https://api.web3forms.com/submit">
+<input type="hidden" name="access_key" value="9df84bea-dce2-4992-b188-e6e55f4dd3c1">
+<input type="hidden" name="subject" value="Globe Daily contact form">
+<input type="hidden" name="from_name" value="Globe Daily">
+<input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+<label for="n">Name</label><input id="n" name="name" type="text" required>
+<label for="e">Email (only used to reply)</label><input id="e" name="email" type="email">
+<label for="t">Topic</label><select id="t" name="topic"><option>Report a wrong answer</option><option>Suggest a question</option><option>Press</option><option>Advertising or partnership</option><option>Something else</option></select>
+<label for="m">Message</label><textarea id="m" name="message" rows="6" required></textarea>
+<button class="pri" type="submit">Send message</button>
+<div id="cf-out" role="status" aria-live="polite"></div>
+</form>
+<aside>
+<div class="card"><div class="tag">Private by design</div><p style="margin-top:6px;font-size:15px">Messages go straight to our inbox. We never publish an email address.</p></div>
+<div class="card"><div class="tag">Reporting a wrong answer?</div><p style="margin-top:6px;font-size:15px">Include the date, the round number and a source. It helps us fix it quickly.</p></div>
+</aside>
+</div>
+</main>
+<footer class="foot">© 2026 Globe Daily · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></footer>
+<script type="module" src="/src/contact.js"></script></body></html>
